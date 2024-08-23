@@ -15,4 +15,13 @@
     <Folder Include="Persistences\Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.4.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.Domain\Movie.Domain.csproj" />
+    <ProjectReference Include="..\Movie.Utilities\Movie.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

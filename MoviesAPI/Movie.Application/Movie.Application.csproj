@@ -16,4 +16,16 @@
     <Folder Include="Validators\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.21.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.Domain\Movie.Domain.csproj" />
+    <ProjectReference Include="..\Movie.Infrastructure\Movie.Infrastructure.csproj" />
+    <ProjectReference Include="..\Movie.Utilities\Movie.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>
