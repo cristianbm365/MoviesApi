@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Movie.Infrastructure.Persistences.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-var connectionString = builder.Configuration["ConnectionStrings:ConectionCbm"];
+var connectionString = builder.Configuration["ConnectionStrings:MovieConection"];
 
-builder.Services.AddDbContext<MovieDatabase>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<MovieContext>(options => options.UseSqlServer(connectionString));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
